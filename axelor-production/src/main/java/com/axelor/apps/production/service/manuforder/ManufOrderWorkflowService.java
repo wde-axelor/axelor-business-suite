@@ -141,7 +141,7 @@ public class ManufOrderWorkflowService {
     for (ManufOrder manufOrder : manufOrderList) {
       if (manufOrder.getOperationOrderList() != null) {
         for (OperationOrder operationOrder : getSortedOperationOrderList(manufOrder)) {
-          operationOrderWorkflowService.plan(operationOrder);
+          operationOrderWorkflowService.plan(operationOrder, null);
         }
       }
     }
